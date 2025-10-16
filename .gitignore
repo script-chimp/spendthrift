@@ -1,0 +1,10 @@
+.venv/
+
+*.env
+*.pyc
+*.csv
+
+# Raw data
+data/raw/
+data/processed/
+data/review/
