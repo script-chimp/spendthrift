@@ -17,19 +17,23 @@ __pycache__/
 *.bak
 *.swp
 *.tmp
+
 # IDE files
 .vscode/
 .idea/
 *.sublime-project
 *.sublime-workspace
+
 # Distribution / packaging
 dist/
 build/
 *.egg-info/
 .eggs/
+
 # PyInstaller
 *.manifest
 *.spec
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -43,7 +47,6 @@ coverage.xml
 *.py,cover
 .hypothesis
 .pytest_cache/
-
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
