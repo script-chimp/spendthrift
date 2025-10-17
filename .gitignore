@@ -57,4 +57,4 @@ coverage.xml
 # Raw data
 data/raw/*
 data/processed/*
-data/review/
+data/review/*
