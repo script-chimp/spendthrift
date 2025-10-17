@@ -1,0 +1,31 @@
+[general]
+is_dev = true
+
+[paths]
+data_dir = "data/"
+raw_data_dir = "data/raw/"
+processed_data_dir = "data/processed/"
+review_data_dir = "data/review/"
+reports_dir = "reports/"
+
+[transaction_formats.PNC]
+columns = ["Transaction Date", "Transaction Description", "Amount", "Balance"]
+date_format = "%m/%d/%Y"
+amount_format = "currency"
+
+[transaction_formats.PNC.mapping]
+"Transaction Date" = "date"
+"Transaction Description" = "description"
+"Amount" = "amount"
+"Balance" = "balance"
+
+[transaction_formats.Chase]
+columns = ["Date", "Description", "Debit", "Credit", "Balance"]
+date_format = "%Y-%m-%d"
+amount_format = "signed_float"
+
+[transaction_formats.Chase.mapping]
+"Date" = "date"
+"Description" = "description"
+"Debit" = "amount"
+"Balance" = "balance"
