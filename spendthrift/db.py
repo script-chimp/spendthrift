@@ -46,14 +46,3 @@ class PostgresDB:
         with self.get_cursor(dict_cursor=True) as cur:
             cur.execute(query, params)
             return cur.fetchone()
-        
-if __name__ == "__main__":
-    db = PostgresDB(
-        host=config.DB_HOST,
-        dbname=config.DB_NAME,
-        user=config.DB_USER,
-        password=os.getenv(config.DB_PASSWORD),
-        port=config.DB_PORT,
-    )
-    # Example usage
-    print(db.fetch_one("SELECT NOW();").get("now"))
