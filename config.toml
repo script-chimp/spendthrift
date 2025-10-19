@@ -1,6 +1,13 @@
 [general]
 is_dev = true
 
+[database]
+host = "localhost"
+database = "spendthrift"
+user = "postgres"
+password = "PG_PASSWORD"
+port = 5432
+
 [paths]
 data_dir = "data/"
 raw_data_dir = "data/raw/"

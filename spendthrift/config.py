@@ -14,6 +14,12 @@ config = toml.load(CONFIG_PATH)
 # Extract configuration values with defaults
 # General settings
 is_dev = config.get("general", {}).get("is_dev", True)
+# Database settings
+DB_HOST = config.get("database", {}).get("host", "localhost")
+DB_NAME = config.get("database", {}).get("database", "spendthrift")
+DB_USER = config.get("database", {}).get("user", "")
+DB_PASSWORD = config.get("database", {}).get("password", "")
+DB_PORT = config.get("database", {}).get("port", 5432)
 # Data directories
 base_path = config.get("paths", {}).get("base_data_dir", Path(__file__).parent.parent)
 data_dir = Path(base_path / config.get("paths", {}).get("data_dir", "data")).resolve()
